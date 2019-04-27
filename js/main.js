@@ -5,6 +5,7 @@ var mapW = 20, mapH = 20
 var mapx = 400, mapy = 0
 var pposx = 10, pposy = 10
 var pcase = pposx + pposy * mapW
+var R = 0
 console.log(pcase)
 
 function getRandomInt(max) {
@@ -23,3 +24,4 @@ function movementloop()
    movement();
 }
 setInterval(movementloop,500)
+

@@ -22,11 +22,11 @@ function drawGame()
             break;
                 case 3:
                     ctx.rect(x*tileW,y*tileH,tileW, tileH)
-                    ctx.fillStyle = "transparent"
+                    ctx.fillStyle = "yellow";
             break;
                 case 4:
                      ctx.rect(x*tileW,y*tileH,tileW, tileH)
-                    ctx.fillStyle = "transparent";
+                    ctx.fillStyle = "blue";
             break;
                 case 5:
                      ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)

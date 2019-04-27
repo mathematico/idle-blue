@@ -42,19 +42,33 @@ function movement(){
     
     pcase = pposx + pposy * mapH
     gameMap[pcase] = 0
-    if(upPressed == true && gameMap[pcase - mapH] == 0 ){
-        
-    pposy -= 1  
+    if(upPressed == true && pposy - 1 >=0 ){
+        if(gameMap[pcase - mapH] == 0){
+            pposy -= 1  
+        }
+    
     }
-    else if(downPressed == true && gameMap[pcase + mapH] == 0){
-    pposy += 1
+
+    else if(downPressed == true && pposy + 1 <=mapH ){
+        if(gameMap[pcase + mapH] == 0){
+            pposy += 1  
+        }
+    
     }
-    else if (rightPressed == true && gameMap[pcase + 1] == 0){
-    pposx += 1    
+    
+    else if(rightPressed == true && pposx + 1 <=mapW ){
+        if(gameMap[pcase + 1] == 0){
+            pposx += 1  
+        }
+    
     }
-    else if (leftPressed == true && gameMap[pcase - 1]  == 0){
-    pposx -= 1    
+    else if(leftPressed == true && pposx - 1 >=0 ){
+        if(gameMap[pcase - 1] == 0){
+            pposx -= 1  
+        }
+    
     }
+    
      console.log(pposx)
      console.log(pposy)
     pcase = pposx + pposy * mapH
