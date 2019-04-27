@@ -8,11 +8,13 @@ var mapx = 400 , mapy = 0
 var pposx = 10, pposy = 10
 var pcase = pposx + pposy * mapW
 var R = 0, Sc=1
-var zone=1
+var zone=1  
 var infight=false
+var font= "bold 12pt sans-serif"
 console.log(pcase)
 
 function load(s){
+font = "bold " + 12*s+"pt sans-serif"
 ctx.canvas.width  = 1280 * s
 ctx.canvas.height = 640 * s   
 tileW = 32 * s, tileH = 32 * s
@@ -20,7 +22,7 @@ mapW = 20, mapH = 20
 mapx = 400 * s , mapy = 0
 pposx = 10, pposy = 10
 pcase = pposx + pposy * mapW
-Sc=1
+Sc=s
 console.log(pcase)
 
 }
