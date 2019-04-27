@@ -1,4 +1,3 @@
-
 function drawGame()
 {    
     for(var y = 0; y < mapH; ++y)
@@ -35,4 +34,25 @@ function drawGame()
             ctx.fillRect(x*tileW+mapx,y*tileH+mapy,tileW, tileH);
         }
     }
-}    
+}
+function drawText()
+{
+    ctx.clearRect(0, 0, 200*Sc , 640*Sc)
+    ctx.font = "bold 12pt sans-serif";
+    ctx.fillStyle = "#ff0000" 
+    ctx.fillText("Health  " + S_health + " / " + S_healthmax, 10, 20)
+    ctx.fillStyle = "black"
+    ctx.fillText("Damage  " + S_damage, 10, 40)
+   
+}
+function drawFText(){
+    ctx.clearRect(200, 0, 200*Sc , 640*Sc)
+    if (infight == true){
+    ctx.clearRect(200, 0, 200*Sc , 640*Sc)
+    ctx.font = "bold 12pt sans-serif";
+    ctx.fillStyle = "#ff0000" 
+    ctx.fillText("EnemmyHealth  " + e_health + " / " + e_healthmax, 200, 20)
+    ctx.fillStyle = "black"
+    ctx.fillText("Damage  " + e_damage, 200, 40)
+    }
+}

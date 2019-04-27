@@ -38,40 +38,60 @@ function keyUpHandler(e) {
 }
 
 function movement(){
-   
-    
+    if (infight==true){
+        
+    }
+        
+    else if(infight==false){
     pcase = pposx + pposy * mapH
     gameMap[pcase] = 0
     if(upPressed == true && pposy - 1 >=0 ){
         if(gameMap[pcase - mapH] == 0){
             pposy -= 1  
+            
+        }else{
+            encounter(gameMap[pcase - mapH])
+            pposy -= 1
         }
+            
     
     }
 
     else if(downPressed == true && pposy + 1 <=mapH ){
         if(gameMap[pcase + mapH] == 0){
             pposy += 1  
+        }else{
+            encounter(gameMap[pcase + mapH])
+            pposy += 1
         }
+         
     
     }
     
-    else if(rightPressed == true && pposx + 1 <=mapW ){
+    else if(rightPressed == true && pposx +2 <=mapW ){
         if(gameMap[pcase + 1] == 0){
             pposx += 1  
+        }else{
+            encounter(gameMap[pcase + 1])
+            pposx += 1
         }
+         
     
     }
     else if(leftPressed == true && pposx - 1 >=0 ){
         if(gameMap[pcase - 1] == 0){
             pposx -= 1  
+        }else{
+            encounter(gameMap[pcase - 1])
+            pposx -= 1
         }
+         
     
     }
     
-     console.log(pposx)
-     console.log(pposy)
+
     pcase = pposx + pposy * mapH
     
     gameMap[pcase] = 2
+    }
 }

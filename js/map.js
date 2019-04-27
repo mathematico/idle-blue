@@ -24,7 +24,6 @@ var gameMap = [
 function generate_bonus(n,b){
     for(var f=0; f<n; ++f){
         R=getRandomInt(mapH*mapW)
-        
         if (gameMap[R]==0){
         gameMap[R] = b
         }
@@ -37,6 +36,6 @@ function generate_bonus(n,b){
 
 pcase = pposx + pposy * mapH   
 gameMap[pcase] = 2
-generate_bonus(100,1)
+generate_bonus(10,1)
 generate_bonus(10,3)
 
