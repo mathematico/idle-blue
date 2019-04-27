@@ -8,17 +8,17 @@ function drawGame()
             switch(gameMap[((y*mapW)+x)])
             {
                 case 0:
-                    ctx.rect(x*tileW,y*tileH,tileW, tileH)
+                    ctx.rect(x*tileW+mapx,y*tileH+mapy,tileW, tileH)
                     ctx.fillStyle = "black";
             break;
                 case 1:
-                    ctx.rect(x*tileW,y*tileH,tileW, tileH)
+                     ctx.rect(x*tileW+mapx,y*tileH+mapy,tileW, tileH)
                     ctx.fillStyle = "purple";
 
             break;
                 case 2:
-                    ctx.rect(x*tileW,y*tileH,tileW, tileH)
-                    ctx.fillStyle = "transparent";
+                    ctx.rect(x*tileW+mapx,y*tileH+mapy,tileW, tileH)
+                    ctx.fillStyle = "red";
             break;
                 case 3:
                     ctx.rect(x*tileW,y*tileH,tileW, tileH)
@@ -32,7 +32,7 @@ function drawGame()
                      ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)
                     ctx.fillStyle = "transparent";
                      }
-            ctx.fillRect( x*tileW, y*tileH, tileW, tileH);
+            ctx.fillRect(x*tileW+mapx,y*tileH+mapy,tileW, tileH);
         }
     }
 }    
