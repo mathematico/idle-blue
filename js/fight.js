@@ -21,4 +21,7 @@ function turn(){
     }
     
 }
+    if (S_health <=0){
+        gameover()
+    }
 }

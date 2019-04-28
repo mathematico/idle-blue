@@ -7,24 +7,24 @@ function drawGame()
             switch(gameMap[((y*mapW)+x)])
             {
                 case 0:
-                    ctx.rect(x*tileW+mapx,y*tileH+mapy,tileW, tileH)
+                    //ctx.rect(x*tileW+mapx,y*tileH+mapy,tileW, tileH)
                     ctx.fillStyle = "black";
             break;
                 case 1:
-                     ctx.rect(x*tileW+mapx,y*tileH+mapy,tileW, tileH)
-                    ctx.fillStyle = "purple";
+                     //ctx.rect(x*tileW+mapx,y*tileH+mapy,tileW, tileH)
+                    ctx.fillStyle = "red";
 
             break;
                 case 2:
-                    ctx.rect(x*tileW+mapx,y*tileH+mapy,tileW, tileH)
-                    ctx.fillStyle = "red";
+                    //ctx.rect(x*tileW+mapx,y*tileH+mapy,tileW, tileH)
+                    ctx.fillStyle = "purple";
             break;
                 case 3:
-                    ctx.rect(x*tileW,y*tileH,tileW, tileH)
+                    //ctx.rect(x*tileW,y*tileH,tileW, tileH)
                     ctx.fillStyle = "yellow";
             break;
                 case 4:
-                     ctx.rect(x*tileW,y*tileH,tileW, tileH)
+                     //ctx.rect(x*tileW,y*tileH,tileW, tileH)
                     ctx.fillStyle = "blue";
             break;
                 case 5:
@@ -37,7 +37,8 @@ function drawGame()
 }
 function drawText()
 {
-    ctx.clearRect(0, 0, 200*Sc , 640*Sc)
+    
+    ctx.clearRect(0, 0, 200*Sc , 120*Sc)
     ctx.font = font;
     ctx.fillStyle = "#ff0000" 
     ctx.fillText("Health  " + S_health + " / " + S_healthmax, 10, 20)
@@ -46,9 +47,9 @@ function drawText()
    
 }
 function drawFText(){
-    ctx.clearRect(200*Sc, 0, 200*Sc , 640*Sc)
+    ctx.clearRect(200*Sc, 0, 200*Sc , 120*Sc)
     if (infight == true){
-    ctx.clearRect(200*Sc, 0, 200*Sc , 640*Sc)
+    ctx.clearRect(200*Sc, 0, 200*Sc , 120*Sc)
     ctx.font = font;
     ctx.fillStyle = "#ff0000" 
     ctx.fillText("EnemmyHealth  " + e_health + " / " + e_healthmax, 200*Sc, 20)

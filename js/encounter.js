@@ -1,5 +1,5 @@
 function encounter(a){
-    if (a==1){
+    if (a==2){
         fight()
         
     }

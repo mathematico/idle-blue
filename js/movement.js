@@ -92,6 +92,6 @@ function movement(){
 
     pcase = pposx + pposy * mapH
     
-    gameMap[pcase] = 2
+    gameMap[pcase] = 1
     }
 }

@@ -2,16 +2,35 @@ var canvas = document.getElementById("game");
 var ctx = canvas.getContext("2d");
 ctx.canvas.width  = 1280
 ctx.canvas.height = 640
+var mmenu = true
 var tileW = 32 , tileH = 32 ;
 var mapW = 20, mapH = 20
 var mapx = 400 , mapy = 0
 var pposx = 10, pposy = 10
 var pcase = pposx + pposy * mapW
 var R = 0, Sc=1
+var scrapammout=0
 var zone=1  
 var infight=false
+var bpres=false
+var gamedone = false
+
+function init(){
+drawbutton()
+gamedone = false
+mmenu = true
+mapW = 20, mapH = 20
+mapx = 400 , mapy = 0
+pposx = 10, pposy = 10
+pcase = pposx + pposy * mapW
+R = 0
+scrapammout=0
+zone=1  
+infight=false
+initmap(1)
+initship()
+}
 var font= "bold 12pt sans-serif"
-console.log(pcase)
 
 function load(s){
 font = "bold " + 12*s+"pt sans-serif"
@@ -26,17 +45,20 @@ Sc=s
 console.log(pcase)
 
 }
-load(1)
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
 
 function drawloop()
-{
-    requestAnimationFrame(drawGame);
-    requestAnimationFrame(drawText);
+{       
+    if (mmenu == true){
+        requestAnimationFrame(drawGame);
+        requestAnimationFrame(drawText);
         requestAnimationFrame(drawFText);
+    
+    }
 }
 setInterval(drawloop,100)    
 
