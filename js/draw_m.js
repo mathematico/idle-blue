@@ -29,8 +29,8 @@ function drawGame()
                     ctx.fillStyle = "blue";
             break;
                 case 5:
-                     ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)
-                    ctx.fillStyle = "transparent";
+                    // ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)
+                    ctx.fillStyle = "pink";
                      }
             ctx.fillRect(x*tileW+mapx,y*tileH+mapy,tileW, tileH);
         }

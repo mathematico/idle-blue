@@ -57,7 +57,7 @@ function movement(){
     
     }
 
-    else if(downPressed == true && pposy + 1 <=mapH ){
+    else if(downPressed == true && pposy + 2 <=mapH ){
         if(gameMap[pcase + mapH] == 0){
             pposy += 1  
         }else{

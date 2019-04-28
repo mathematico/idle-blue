@@ -56,10 +56,13 @@ gameMap = [
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 ];
-
+pposx =10
+pposy =10
 pcase = pposx + pposy * mapH   
 gameMap[pcase] = 1
-generate_bonus(10,2)
-generate_bonus(10,3)
+generate_bonus(5*z,2)
+generate_bonus(1,3)
+generate_bonus(1,4)
+generate_bonus(1,5)    
     
 }

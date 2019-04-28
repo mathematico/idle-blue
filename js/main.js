@@ -12,6 +12,7 @@ var R = 0, Sc=1
 var scrapammout=0
 var zone=1  
 var infight=false
+var inbossfight= false
 var bpres=false
 var gamedone = false
 var mouseX=0,mouseY=0
@@ -28,6 +29,7 @@ function init(){
     scrapammout=0
     zone=1  
     infight=false
+    inbossfight=false
     initmap(1)
     initship()
     drawbutton()
@@ -74,7 +76,7 @@ function fightloop()
 {
    turn();
 }
-setInterval(fightloop,100)
+setInterval(fightloop,500)
 
 
 
