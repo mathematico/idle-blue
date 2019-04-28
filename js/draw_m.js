@@ -1,5 +1,6 @@
 function drawGame()
 {    
+    ctx.clearRect(400*Sc, 0, 640*Sc , 640*Sc)
     for(var y = 0; y < mapH; ++y)
     {
         for(var x = 0; x < mapW; ++x)

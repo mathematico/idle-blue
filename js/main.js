@@ -14,21 +14,23 @@ var zone=1
 var infight=false
 var bpres=false
 var gamedone = false
-
+var mouseX=0,mouseY=0
 function init(){
-drawbutton()
-gamedone = false
-mmenu = true
-mapW = 20, mapH = 20
-mapx = 400 , mapy = 0
-pposx = 10, pposy = 10
-pcase = pposx + pposy * mapW
-R = 0
-scrapammout=0
-zone=1  
-infight=false
-initmap(1)
-initship()
+    ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
+    drawbutton()
+    gamedone = false
+    mmenu = true
+    mapW = 20, mapH = 20
+    mapx = 400 , mapy = 0
+    pposx = 10, pposy = 10
+    pcase = pposx + pposy * mapW
+    R = 0
+    scrapammout=0
+    zone=1  
+    infight=false
+    initmap(1)
+    initship()
+    drawbutton()
 }
 var font= "bold 12pt sans-serif"
 
@@ -59,6 +61,7 @@ function drawloop()
         requestAnimationFrame(drawFText);
     
     }
+
 }
 setInterval(drawloop,100)    
 
@@ -66,12 +69,12 @@ function movementloop()
 {
    movement();
 }
-setInterval(movementloop,500)
+setInterval(movementloop,100)
 function fightloop()
 {
    turn();
 }
-setInterval(fightloop,1000)
+setInterval(fightloop,100)
 
 
 
