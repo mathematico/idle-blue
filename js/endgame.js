@@ -1,5 +1,5 @@
 function gameover(){
-    gamedone is true
+    gamedone = true
     mmenu = false
       ctx.clearRect(0, 0, ctx.canvas.width , ctx.canvas.height)
      ctx.fillStyle = "#ff0000" 
