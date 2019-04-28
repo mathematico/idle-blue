@@ -10,9 +10,9 @@ function fight(t){
     infight= true    
     }
     if (t==2){
-    e_healthmax = Math.floor(6*Math.pow(1.35,zone))
+    e_healthmax = Math.floor(6*Math.pow(1.40,zone))
     e_health=e_healthmax
-    e_damage = Math.floor(2*Math.pow(1.30,zone))
+    e_damage = Math.floor(2*Math.pow(1.35,zone))
     infight= true
     inbossfight= true
     }

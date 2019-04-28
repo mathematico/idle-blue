@@ -41,10 +41,12 @@ function drawText()
     
     ctx.clearRect(0, 0, 200*Sc , 120*Sc)
     ctx.font = font;
+    ctx.fillStyle = "blue" 
+    ctx.fillText("Zone " + zone, 10, 20)
     ctx.fillStyle = "#ff0000" 
-    ctx.fillText("Health  " + S_health + " / " + S_healthmax, 10, 20)
+    ctx.fillText("Health  " + S_health + " / " + S_healthmax, 10, 40)
     ctx.fillStyle = "black"
-    ctx.fillText("Damage  " + S_damage, 10, 40)
+    ctx.fillText("Damage  " + S_damage, 10, 60)
    
 }
 function drawFText(){
@@ -53,8 +55,15 @@ function drawFText(){
     ctx.clearRect(200*Sc, 0, 200*Sc , 120*Sc)
     ctx.font = font;
     ctx.fillStyle = "#ff0000" 
-    ctx.fillText("EnemmyHealth  " + e_health + " / " + e_healthmax, 200*Sc, 20)
+    ctx.fillText("Enemy Health  " + e_health + " / " + e_healthmax, 200*Sc, 40)
     ctx.fillStyle = "black"
-    ctx.fillText("Damage  " + e_damage, 200*Sc, 40)
+    ctx.fillText("Damage  " + e_damage, 200*Sc, 60)
+        if (inbossfight==true){
+            ctx.fillStyle = "black"
+            ctx.fillText("boss", 200*Sc, 20)
+        }else{
+            ctx.fillStyle = "black"
+            ctx.fillText("enemy", 200*Sc, 20)
+        }
     }
 }
