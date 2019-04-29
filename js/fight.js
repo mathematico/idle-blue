@@ -23,7 +23,13 @@ function turn(){
     if (infight==true && gamedone==false){
     e_health = e_health - S_damage
         if (e_health >=0){
-        S_health = S_health - e_damage
+        inter=Math.floor(scraparmor-(e_damage*0.5))
+            if (inter >=0){
+            scraparmor=inter
+            }else{
+            scraparmor=0
+            S_health = S_health + 2*inter     
+            }
         }else {
             if (inbossfight==false){
                 infight=false

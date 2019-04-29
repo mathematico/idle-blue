@@ -35,6 +35,11 @@ function drawbutton(){
         butcreate(0,80,200,50,"red","Heal " +Math.round(0.1*S_healthmax)+ " Hp price:"+Healprice)
         
     }
+    if (shopfirst == false && Ssmenu== true && Healprice>=8){
+        
+        butcreate(0,130,200,50,"red","Buy " +Math.round(0.08*S_healthmax)+ " armor price:"+scraparmorprice)
+        
+    }
     
 }
 
@@ -70,8 +75,15 @@ function checkbutton(){
     }
     if (shopfirst == false && Ssmenu== true){
         mcheck(mouseX,mouseY,0,80,200,50,2)
-        if (bpres ==true, bid==2){
+        if (bpres ==true && bid==2){
             buyheal()
+        }
+        
+    }
+    if (shopfirst == false && Ssmenu== true && Healprice>=8){
+        mcheck(mouseX,mouseY,0,130,200,50,3)
+        if (bpres ==true && bid==3){
+             buyscraparmor()
         }
         
     }

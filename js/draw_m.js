@@ -59,7 +59,11 @@ function drawText()
     if (tcamount>0){
     ctx.fillStyle = "black"
     ctx.fillText("temportal currency" + tcamount, 10, 440)    
-    }             
+    }
+    if (scraparmorupgrade==true || scraparmor>0){
+    ctx.fillStyle = "brown"
+    ctx.fillText("Scraparmor "+scraparmor, 10, 80)    
+    }
 }
 function drawFText(){
     ctx.clearRect(200*Sc, 0, 200*Sc , 540*Sc)

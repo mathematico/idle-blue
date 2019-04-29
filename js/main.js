@@ -19,8 +19,10 @@ var gamedone = false
 var mouseX=0,mouseY=0
 var Ssmenu=false, shopfirst= false
 var bid= 0
-var Healprice=1
+var Healprice=1,scraparmorprice=5
 var mouseCase=0,mouseType=0
+var scraparmor=0,scraparmorupgrade = false
+var inter=0
 
 function init(){
     ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
@@ -36,11 +38,14 @@ function init(){
     scrapamount=0
     zone=1
     Healprice=1
+    scraparmorprice=5
+    
     infight=false
     inbossfight=false
     initmap(1)
     initship()
     drawbutton()
+    
     
 }
 var font= "bold 12pt sans-serif"

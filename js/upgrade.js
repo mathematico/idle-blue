@@ -17,3 +17,14 @@ function buyheal(){
     
    
 }
+function buyscraparmor(){
+    if (scrapamount >= scraparmorprice){
+        scraparmor = Math.round(0.08*S_healthmax)
+        scrapamount -=  scraparmorprice
+        scraparmorprice = Math.ceil(scraparmorprice*1.5)
+    
+    }
+    
+    
+    
+}
