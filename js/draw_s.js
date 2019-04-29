@@ -1,6 +1,6 @@
 function drawSshop(){
     if (shopfirst == true){
-        setTimeout(shoptime,50)
+        setTimeout(shoptime,10)
         
         
     }else{

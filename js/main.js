@@ -20,6 +20,7 @@ var mouseX=0,mouseY=0
 var Ssmenu=false, shopfirst= false
 var bid= 0
 var Healprice=1
+var mouseCase=0,mouseType=0
 
 function init(){
     ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
@@ -69,6 +70,7 @@ function drawloop()
         requestAnimationFrame(drawGame);
         requestAnimationFrame(drawText);
         requestAnimationFrame(drawFText);
+        requestAnimationFrame(drawTooltip);
     }
     if (Ssmenu == true){
         requestAnimationFrame(drawSshop);

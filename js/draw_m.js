@@ -80,3 +80,49 @@ function drawFText(){
         
     }
 }
+function drawTooltip(){
+    if (infight== false){
+        mouseType=gameMap[mouseCase]
+        if (mouseType == 0){
+            ctx.fillStyle = "black"
+            ctx.fillText("Space void...", 200*Sc, 20)
+            
+        }else if(mouseType==1){
+            ctx.fillStyle = "black"
+            ctx.fillText("Your ship captain", 200*Sc, 20)
+            
+        }else if(mouseType==2){
+            ctx.fillStyle = "black"
+            ctx.fillText("Hostile enemy", 200*Sc, 20)
+            ctx.fillText("Enemy Health  " + Math.floor(3*Math.pow(1.3,zone)), 200*Sc, 40)
+            ctx.fillText("Damage  " + Math.floor(1*Math.pow(1.3,zone)), 200*Sc, 60)
+        }else if(mouseType==3){
+            ctx.fillStyle = "black"
+            ctx.fillText("Hyperplating ", 200*Sc, 20)
+            ctx.fillText("for the ship", 200*Sc, 40)
+        }else if(mouseType==4){
+            ctx.fillStyle = "black"
+            ctx.fillText("Plasma accelerator ", 200*Sc, 20)
+            ctx.fillText("for the ship", 200*Sc, 40)
+        }else if(mouseType==5){
+            ctx.fillStyle = "black"
+            ctx.fillText("Boss of the zone", 200*Sc, 20)
+            ctx.fillText("Enemy Health  " + Math.floor(6*Math.pow(1.4,zone)), 200*Sc, 40)
+            ctx.fillText("Damage  " + Math.floor(2*Math.pow(1.35,zone)), 200*Sc, 60)
+        }else if(mouseType==6){
+            ctx.fillText("Harvestable scrap", 200*Sc, 20)
+            ctx.fillText("Scrap detected: " + 2 *zone, 200*Sc, 40)
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+}
