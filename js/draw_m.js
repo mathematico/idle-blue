@@ -36,7 +36,20 @@ function drawGame()
                 case 6:
                     // ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)
                     ctx.fillStyle = "brown";
-                     }
+                     
+            break;
+                case 7:
+                    // ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)
+                    ctx.fillStyle = "dimgray";
+            break;
+                case 8:
+                    // ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)
+                    ctx.fillStyle = "maroon";
+            break;
+                case 9:
+                    // ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)
+                    ctx.fillStyle = "cyan";        
+                     }         
             ctx.fillRect(x*tileW+mapx,y*tileH+mapy,tileW, tileH);
         }
     }
@@ -63,6 +76,11 @@ function drawText()
     if (scraparmorupgrade==true || scraparmor>0){
     ctx.fillStyle = "brown"
     ctx.fillText("Scraparmor "+scraparmor, 10, 80)    
+    }
+     if (S_shieldregen>0){
+    ctx.fillStyle = "cyan"
+    ctx.fillText("Shield  " + S_shield + " / " + S_shieldmax, 10, 100)
+    ctx.fillText("Shieldregen " + S_shieldregen * 10 + "/s", 10, 120)     
     }
 }
 function drawFText(){
@@ -114,9 +132,22 @@ function drawTooltip(){
             ctx.fillText("Enemy Health  " + Math.floor(6*Math.pow(1.4,zone)), 200*Sc, 40)
             ctx.fillText("Damage  " + Math.floor(2*Math.pow(1.35,zone)), 200*Sc, 60)
         }else if(mouseType==6){
+            ctx.fillStyle = "black"
             ctx.fillText("Harvestable scrap", 200*Sc, 20)
-            ctx.fillText("Scrap detected: " + 2 *zone, 200*Sc, 40)
+            ctx.fillText("Scrap detected: " + 2 *zone, 200*Sc, 40)    
+        }else if(mouseType==7){
+            ctx.fillStyle = "black"
+            ctx.fillText("Space wall anomaly", 200*Sc, 20)
+            ctx.fillText("Don't ask too much", 200*Sc, 40)
+        }else if(mouseType==8){
+            ctx.fillStyle = "black"
+            ctx.fillText("Some scraparmor deposit", 200*Sc, 20)
+            ctx.fillText("Armor:"+(zone-3)*2, 200*Sc, 40)    
             
+        }else if(mouseType==9){
+            ctx.fillStyle = "cyan"
+            ctx.fillText("Very energetic system", 200*Sc, 20)
+            ctx.fillText("It's mysterious", 200*Sc, 40)    
             
         }
         

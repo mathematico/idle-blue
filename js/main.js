@@ -19,10 +19,12 @@ var gamedone = false
 var mouseX=0,mouseY=0
 var Ssmenu=false, shopfirst= false
 var bid= 0
-var Healprice=1,scraparmorprice=5
+var Healprice=1,scraparmorprice=2
 var mouseCase=0,mouseType=0
 var scraparmor=0,scraparmorupgrade = false
-var inter=0
+var inter=0, inter_2=0
+var S_shield =0, S_shieldregen=0, S_shieldmax=0
+var Shieldregenprice=50, Shieldmaxprice=20
 
 function init(){
     ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
@@ -38,8 +40,10 @@ function init(){
     scrapamount=0
     zone=1
     Healprice=1
-    scraparmorprice=5
-    
+    scraparmorprice=2
+    S_shieldregen=0
+    Shieldregenprice=50
+    Shieldmaxprice=20
     infight=false
     inbossfight=false
     initmap(1)
@@ -94,6 +98,14 @@ function fightloop()
    turn();
 }
 setInterval(fightloop,500)
-
-
-
+function logicloop (){
+Shieldact()    
+    
+}
+setInterval(logicloop,100)
+window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+}, false);

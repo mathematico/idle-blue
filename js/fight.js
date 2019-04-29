@@ -23,23 +23,29 @@ function turn(){
     if (infight==true && gamedone==false){
     e_health = e_health - S_damage
         if (e_health >=0){
-        inter=Math.floor(scraparmor-(e_damage*0.5))
-            if (inter >=0){
-            scraparmor=inter
-            }else{
-            scraparmor=0
-            S_health = S_health + 2*inter     
+            inter_2 = e_damage - Math.floor(S_shield)
+                if (inter_2>=0){
+                    S_shield=0
+                }else{
+                    S_shield=S_shield-e_damage
+                }
+                inter=scraparmor-(inter_2*0.5)
+                if (inter >=0){
+                scraparmor=Math.floor(inter)
+                }else{
+                scraparmor=0
+                S_health = S_health + Math.floor(2*inter)     
             }
         }else {
             if (inbossfight==false){
                 infight=false
-                scrapamount += zone
+                scrapamount += 2*zone
                 drawbutton()
             } else if(inbossfight==true){
                 console.log("bosskill")
                 infight=false
                 inbossfight=false
-                scrapamount += 5*zone
+                scrapamount += 8*zone
                 tcamount += Math.floor(Math.pow(zone,1.1)/10)
                 zone +=1
                 initmap(zone)

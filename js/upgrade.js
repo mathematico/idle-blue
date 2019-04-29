@@ -19,12 +19,30 @@ function buyheal(){
 }
 function buyscraparmor(){
     if (scrapamount >= scraparmorprice){
-        scraparmor = Math.round(0.08*S_healthmax)
+        scraparmor += Math.round(0.04*S_healthmax)
         scrapamount -=  scraparmorprice
-        scraparmorprice = Math.ceil(scraparmorprice*1.5)
+        scraparmorprice = Math.ceil(scraparmorprice*1.1)
     
     }
     
     
+    
+}
+function buyshieldmax(){
+    if (scrapamount >= Shieldmaxprice){
+        S_shieldmax = Math.floor(S_shieldmax*1.25)
+        scrapamount -= Shieldmaxprice
+        Shieldmaxprice = Math.ceil(Shieldmaxprice*1.5)
+    
+    }
+    
+}
+function buyshieldregen(){
+    if (scrapamount >= Shieldregenprice){
+        S_shieldregen = S_shieldregen*2
+        scrapamount -= Shieldregenprice
+        Shieldregenprice = Math.ceil(Shieldregenprice*4)
+    
+    }
     
 }

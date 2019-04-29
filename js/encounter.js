@@ -16,6 +16,12 @@ function encounter(a){
     if (a==6){
         bonus(3)
     }
+    if (a==8){
+        bonus(4)
+    }
+    if (a==9){
+        bonus(5)
+    }
     drawbutton()
 }
 function bonus(t){
@@ -30,6 +36,12 @@ function bonus(t){
     }
     if (t==3){
         scrapamount += 2 *zone
+    }
+    if (t==4){
+        scraparmor += 2 *(zone-3)
+    }
+    if (t==5){
+        shieldpickup()
     }
     drawbutton()
 }

@@ -37,7 +37,17 @@ function drawbutton(){
     }
     if (shopfirst == false && Ssmenu== true && Healprice>=8){
         
-        butcreate(0,130,200,50,"red","Buy " +Math.round(0.08*S_healthmax)+ " armor price:"+scraparmorprice)
+        butcreate(0,130,200,50,"red","Buy " +Math.round(0.04*S_healthmax)+ " armor price:"+scraparmorprice)
+        
+    }
+    if (shopfirst == false && Ssmenu== true && S_shieldregen>0){
+        
+        butcreate(0,240,200,50,"royalblue","Increase to " +Math.floor(S_shieldmax * 1.25)+ " Shield max, price:"+Shieldmaxprice,7)
+        
+    }
+    if (shopfirst == false && Ssmenu== true && S_shieldmax>20){
+        
+        butcreate(0,290,200,50,"royalblue","Increase to " +S_shieldregen*2 + " Shield regen, price:"+Shieldregenprice,7)
         
     }
     
@@ -65,7 +75,7 @@ function checkbutton(){
      }
     if (shopfirst == false && Ssmenu== true){
         mcheck(mouseX,mouseY,0,540,100,50,1)
-        if (bpres ==true, bid==1){
+        if (bpres ==true && bid==1){
             console.log(Ssmenu)
             Ssmenu=false
             mmenu=true
@@ -76,7 +86,9 @@ function checkbutton(){
     if (shopfirst == false && Ssmenu== true){
         mcheck(mouseX,mouseY,0,80,200,50,2)
         if (bpres ==true && bid==2){
+            
             buyheal()
+            bpres = false
         }
         
     }
@@ -84,6 +96,23 @@ function checkbutton(){
         mcheck(mouseX,mouseY,0,130,200,50,3)
         if (bpres ==true && bid==3){
              buyscraparmor()
+            bpres=false
+        }
+        
+    }
+    if (shopfirst == false && Ssmenu== true && S_shieldregen>0){
+        mcheck(mouseX,mouseY,0,240,200,50,4)
+        if (bpres ==true && bid==4){
+             buyshieldmax()
+            bpres=false
+        }
+        
+    }
+    if (shopfirst == false && Ssmenu== true && S_shieldmax>20){
+        mcheck(mouseX,mouseY,0,290,200,50,5)
+        if (bpres ==true && bid==5){
+             buyshieldregen()
+            bpres=false
         }
         
     }

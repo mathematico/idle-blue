@@ -46,8 +46,8 @@ function movement(){
     pcase = pposx + pposy * mapH
     gameMap[pcase] = 0
     if(upPressed == true && pposy - 1 >=0 ){
-        if(gameMap[pcase - mapH] == 0){
-            pposy -= 1  
+        if(gameMap[pcase - mapH] == 7){
+            
             
         }else{
             encounter(gameMap[pcase - mapH])
@@ -58,8 +58,8 @@ function movement(){
     }
 
     else if(downPressed == true && pposy + 2 <=mapH ){
-        if(gameMap[pcase + mapH] == 0){
-            pposy += 1  
+        if(gameMap[pcase + mapH] == 7){
+           
         }else{
             encounter(gameMap[pcase + mapH])
             pposy += 1
@@ -69,8 +69,8 @@ function movement(){
     }
     
     else if(rightPressed == true && pposx +2 <=mapW ){
-        if(gameMap[pcase + 1] == 0){
-            pposx += 1  
+        if(gameMap[pcase + 1] == 7){
+              
         }else{
             encounter(gameMap[pcase + 1])
             pposx += 1
@@ -79,8 +79,8 @@ function movement(){
     
     }
     else if(leftPressed == true && pposx - 1 >=0 ){
-        if(gameMap[pcase - 1] == 0){
-            pposx -= 1  
+        if(gameMap[pcase - 1] == 7){
+            
         }else{
             encounter(gameMap[pcase - 1])
             pposx -= 1
