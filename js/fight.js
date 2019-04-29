@@ -20,18 +20,24 @@ function fight(t){
 }
 
 function turn(){
-    if (infight==true){
+    if (infight==true && gamedone==false){
     e_health = e_health - S_damage
         if (e_health >=0){
         S_health = S_health - e_damage
-    } else {
-        if (inbossfight==false){
-        infight=false
-        } else if(inbossfight==true){
-        infight=false
-        inbossfight=false
-        zone +=1
-        initmap(zone)
+        }else {
+            if (inbossfight==false){
+                infight=false
+                scrapamount += zone
+                drawbutton()
+            } else if(inbossfight==true){
+                console.log("bosskill")
+                infight=false
+                inbossfight=false
+                scrapamount += 5*zone
+                tcamount += Math.floor(Math.pow(zone,1.1)/10)
+                zone +=1
+                initmap(zone)
+                drawbutton()
         }
     }
     

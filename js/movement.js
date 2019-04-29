@@ -42,7 +42,7 @@ function movement(){
         
     }
         
-    else if(infight==false){
+    else if(infight==false && mmenu==true){
     pcase = pposx + pposy * mapH
     gameMap[pcase] = 0
     if(upPressed == true && pposy - 1 >=0 ){

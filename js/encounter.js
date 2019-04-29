@@ -1,4 +1,5 @@
 function encounter(a){
+    
     if (a==2){
         fight(1)
         
@@ -13,11 +14,12 @@ function encounter(a){
         fight(2)
     }
     if (a==6){
-        bonus(1)
+        bonus(3)
     }
-    
+    drawbutton()
 }
 function bonus(t){
+    
     if (t==1){
         R= S_health/S_healthmax
         S_healthmax = Math.floor(S_healthmax * 1.25)
@@ -26,5 +28,8 @@ function bonus(t){
     if (t==2){
         S_damage = Math.ceil(S_damage * 1.25)
     }
-    
+    if (t==3){
+        scrapamount += 2 *zone
+    }
+    drawbutton()
 }

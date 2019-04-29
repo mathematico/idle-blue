@@ -1,0 +1,17 @@
+function buyheal(){
+    if (scrapamount>= Healprice && S_health<S_healthmax){
+        S_health = Math.round(S_health + 0.1*S_healthmax)
+        scrapamount = scrapamount - Healprice
+        if (S_health > S_healthmax) {
+            S_health=S_healthmax
+            
+        }
+        
+        
+        Healprice = Math.ceil(Healprice*1.25)
+    }
+    
+    
+    
+drawbutton()    
+}

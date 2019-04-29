@@ -31,6 +31,11 @@ function drawGame()
                 case 5:
                     // ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)
                     ctx.fillStyle = "pink";
+                     
+            break;
+                case 6:
+                    // ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)
+                    ctx.fillStyle = "brown";
                      }
             ctx.fillRect(x*tileW+mapx,y*tileH+mapy,tileW, tileH);
         }
@@ -39,7 +44,7 @@ function drawGame()
 function drawText()
 {
     
-    ctx.clearRect(0, 0, 200*Sc , 120*Sc)
+    ctx.clearRect(0, 0, 200*Sc , 540*Sc)
     ctx.font = font;
     ctx.fillStyle = "blue" 
     ctx.fillText("Zone " + zone, 10, 20)
@@ -47,12 +52,19 @@ function drawText()
     ctx.fillText("Health  " + S_health + " / " + S_healthmax, 10, 40)
     ctx.fillStyle = "black"
     ctx.fillText("Damage  " + S_damage, 10, 60)
-   
+    if (scrapamount>0){
+    ctx.fillStyle = "black"
+    ctx.fillText("Scrap  " + scrapamount, 10, 320)    
+    }
+    if (tcamount>0){
+    ctx.fillStyle = "black"
+    ctx.fillText("temportal currency" + tcamount, 10, 440)    
+    }             
 }
 function drawFText(){
-    ctx.clearRect(200*Sc, 0, 200*Sc , 120*Sc)
+    ctx.clearRect(200*Sc, 0, 200*Sc , 540*Sc)
     if (infight == true){
-    ctx.clearRect(200*Sc, 0, 200*Sc , 120*Sc)
+    ctx.clearRect(200*Sc, 0, 200*Sc , 540*Sc)
     ctx.font = font;
     ctx.fillStyle = "#ff0000" 
     ctx.fillText("Enemy Health  " + e_health + " / " + e_healthmax, 200*Sc, 40)
@@ -65,5 +77,6 @@ function drawFText(){
             ctx.fillStyle = "black"
             ctx.fillText("enemy", 200*Sc, 20)
         }
+        
     }
 }

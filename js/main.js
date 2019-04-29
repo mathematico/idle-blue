@@ -9,30 +9,38 @@ var mapx = 400 , mapy = 0
 var pposx = 10, pposy = 10
 var pcase = pposx + pposy * mapW
 var R = 0, Sc=1
-var scrapammout=0
+var scrapamount=0
+var tcamount=0
 var zone=1  
 var infight=false
 var inbossfight= false
 var bpres=false
 var gamedone = false
 var mouseX=0,mouseY=0
+var Ssmenu=false, shopfirst= false
+var bid= 0
+var Healprice=1
+
 function init(){
     ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
     drawbutton()
     gamedone = false
+    Ssmenu=false
     mmenu = true
     mapW = 20, mapH = 20
     mapx = 400 , mapy = 0
     pposx = 10, pposy = 10
     pcase = pposx + pposy * mapW
     R = 0
-    scrapammout=0
-    zone=1  
+    scrapamount=0
+    zone=1
+    Healprice=1
     infight=false
     inbossfight=false
     initmap(1)
     initship()
     drawbutton()
+    
 }
 var font= "bold 12pt sans-serif"
 
@@ -61,7 +69,9 @@ function drawloop()
         requestAnimationFrame(drawGame);
         requestAnimationFrame(drawText);
         requestAnimationFrame(drawFText);
-    
+    }
+    if (Ssmenu == true){
+        requestAnimationFrame(drawSshop);
     }
 
 }

@@ -63,6 +63,7 @@ gameMap[pcase] = 1
 generate_bonus(5*z,2)
 generate_bonus(1,3)
 generate_bonus(1,4)
-generate_bonus(1,5)    
+generate_bonus(1,5)
+generate_bonus(2,6)    
     
 }
