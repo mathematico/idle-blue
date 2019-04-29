@@ -9,9 +9,11 @@ function buyheal(){
         
         
         Healprice = Math.ceil(Healprice*1.25)
+        drawbutton() 
+       //ctx.clearRect(0, 0, 200*Sc , 80*Sc)
     }
     
     
     
-drawbutton()    
+   
 }

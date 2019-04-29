@@ -15,11 +15,11 @@ function butcreate(bx,by,bw,bh,color,text){
         }
         
      ctx.clearRect((bx*Sc), (by*Sc), (bw*Sc), (bh*Sc))
-    ctx.strokeStyle = "blue"
-    ctx.fillStyle = color;
-    ctx.rect((bx*Sc), (by*Sc), (bw*Sc), (bh*Sc));
-    ctx.stroke();
+    ctx.fillStyle = "blue"
     
+    ctx.fillRect((bx*Sc), (by*Sc), (bw*Sc), (bh*Sc));
+
+    ctx.fillStyle = color;
     
     ctx.fillRect((bx*Sc)+1, (by*Sc)+1, (bw*Sc)-2, (bh*Sc)-2)
     ctx.font = font
