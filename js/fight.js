@@ -26,16 +26,19 @@ function turn(){
             inter_2 = e_damage - Math.floor(S_shield)
                 if (inter_2>=0){
                     S_shield=0
-                }else{
+
+                    inter=scraparmor-(inter_2*0.5)
+                    if (inter >=0){
+                    scraparmor=Math.floor(inter)
+                    }else{
+                    scraparmor=0
+                    S_health = S_health - Math.floor(-2*inter)
+
+                }}else{
                     S_shield=S_shield-e_damage
                 }
-                inter=scraparmor-(inter_2*0.5)
-                if (inter >=0){
-                scraparmor=Math.floor(inter)
-                }else{
-                scraparmor=0
-                S_health = S_health + Math.floor(2*inter)
-            }
+
+            
         }else {
             if (inbossfight==false){
                 infight=false
