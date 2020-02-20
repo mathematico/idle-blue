@@ -1,8 +1,8 @@
 function encounter(a){
-    
+
     if (a==2){
         fight(1)
-        
+
     }
     if (a==3){
         bonus(1)
@@ -22,10 +22,10 @@ function encounter(a){
     if (a==9){
         bonus(5)
     }
-    drawbutton()
+
 }
 function bonus(t){
-    
+
     if (t==1){
         R= S_health/S_healthmax
         S_healthmax = Math.floor(S_healthmax * 1.25)
@@ -43,5 +43,5 @@ function bonus(t){
     if (t==5){
         shieldpickup()
     }
-    drawbutton()
+
 }

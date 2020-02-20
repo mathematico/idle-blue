@@ -56,7 +56,7 @@ function drawGame()
 }
 function drawText()
 {
-
+    var statT ="Health: " + S_health + " / " + S_healthmax
     ctx.clearRect(0, 0, 200*Sc , 540*Sc)
     ctx.font = font;
     ctx.fillStyle = "blue"
@@ -68,20 +68,25 @@ function drawText()
     if (scrapamount>0){
     ctx.fillStyle = "black"
     ctx.fillText("Scrap  " + scrapamount, 10, 320)
+    statT= statT+ " Scrap : " + scrapamount
     }
     if (tcamount>0){
     ctx.fillStyle = "black"
     ctx.fillText("temportal currency" + tcamount, 10, 440)
+    statT= statT+ "temportal currency" + tcamount
     }
     if (scraparmorupgrade==true || scraparmor>0){
     ctx.fillStyle = "brown"
     ctx.fillText("Scraparmor "+scraparmor, 10, 80)
+    statT= statT+ "Scraparmor "+scraparmor
     }
      if (S_shieldregen>0){
     ctx.fillStyle = "cyan"
     ctx.fillText("Shield  " + S_shield + " / " + S_shieldmax, 10, 100)
     ctx.fillText("Shieldregen " + S_shieldregen * 10 + "/s", 10, 120)
+    statT= statT+ "Shield  " + S_shield + " / " + S_shieldmax + "Shieldregen " + S_shieldregen * 10 + "/s"
     }
+    document.getElementById("stat").innerHTML=statT
 }
 function drawFText(){
     ctx.clearRect(200*Sc, 0, 200*Sc , 540*Sc)
