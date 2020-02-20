@@ -4,28 +4,28 @@
 <body>
 
   <div class="w3-container">
-    <h2>Tabs</h2>
-    <p>Tabs are perfect for single page web applications, or for web pages capable of displaying different subjects. Click on the links below.</p>
+
   </div>
 
   <div class="w3-bar w3-black">
     <button class="w3-bar-item w3-button" onclick="fopentab('Map')">Map</button>
-    <button class="w3-bar-item w3-button" onclick="fopentab('Upgrade')">Paris</button>
-    <button class="w3-bar-item w3-button" onclick="fopentab('Prestige')">Tokyo</button>
+    <button class="w3-bar-item w3-button" onclick="fopentab('Upgrade')">Upgrade</button>
+    <button class="w3-bar-item w3-button" onclick="fopentab('Prestige')">Prestige</button>
   </div>
 
-  <div id="Map" class="w3-container city">
+  <div id="Map" class="w3-container tab">
 
     <canvas id="game" width="1280" height="640"></canvas>
   </div>
 
-  <div id="Upgrade" class="w3-container city" style="display:none">
+  <div id="Upgrade" class="w3-container tab" style="display:none">
 
   </div>
 
-  <div id="Prestige" class="w3-container city" style="display:none">
+  <div id="Prestige" class="w3-container tab" style="display:none">
 
   </div>
+   <script src="js/display.js"></script>
  <script src="js/main.js"></script>
     <script src="js/draw_m.js"></script>
     <script src="js/map.js"></script>
@@ -36,19 +36,12 @@
     <script src="js/endgame.js"></script>
     <script src="js/mylib.js"></script>
     <script src="js/button.js"></script>
-    <script src="js/draw_s.js"></script>
+
     <script src="js/upgrade.js"></script>
     <script src="js/logic.js"></script>
     <script src="js/load.js"></script>
     <script>
-function fopentab(tabName) {
-  var i;
-  var x = document.getElementsByClassName("tab");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  document.getElementById(tabName).style.display = "block";
-}
+
 </script>
 </body>
 

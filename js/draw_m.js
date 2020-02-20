@@ -1,5 +1,5 @@
 function drawGame()
-{    
+{
     ctx.clearRect(400*Sc, 0, 640*Sc , 640*Sc)
     for(var y = 0; y < mapH; ++y)
     {
@@ -31,12 +31,12 @@ function drawGame()
                 case 5:
                     // ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)
                     ctx.fillStyle = "pink";
-                     
+
             break;
                 case 6:
                     // ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)
                     ctx.fillStyle = "brown";
-                     
+
             break;
                 case 7:
                     // ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)
@@ -48,39 +48,39 @@ function drawGame()
             break;
                 case 9:
                     // ctx.drawImage(img_stone,x*tileW,y*tileH,32,32)
-                    ctx.fillStyle = "cyan";        
-                     }         
+                    ctx.fillStyle = "cyan";
+                     }
             ctx.fillRect(x*tileW+mapx,y*tileH+mapy,tileW, tileH);
         }
     }
 }
 function drawText()
 {
-    
+
     ctx.clearRect(0, 0, 200*Sc , 540*Sc)
     ctx.font = font;
-    ctx.fillStyle = "blue" 
+    ctx.fillStyle = "blue"
     ctx.fillText("Zone " + zone, 10, 20)
-    ctx.fillStyle = "#ff0000" 
+    ctx.fillStyle = "#ff0000"
     ctx.fillText("Health  " + S_health + " / " + S_healthmax, 10, 40)
     ctx.fillStyle = "black"
     ctx.fillText("Damage  " + S_damage, 10, 60)
     if (scrapamount>0){
     ctx.fillStyle = "black"
-    ctx.fillText("Scrap  " + scrapamount, 10, 320)    
+    ctx.fillText("Scrap  " + scrapamount, 10, 320)
     }
     if (tcamount>0){
     ctx.fillStyle = "black"
-    ctx.fillText("temportal currency" + tcamount, 10, 440)    
+    ctx.fillText("temportal currency" + tcamount, 10, 440)
     }
     if (scraparmorupgrade==true || scraparmor>0){
     ctx.fillStyle = "brown"
-    ctx.fillText("Scraparmor "+scraparmor, 10, 80)    
+    ctx.fillText("Scraparmor "+scraparmor, 10, 80)
     }
      if (S_shieldregen>0){
     ctx.fillStyle = "cyan"
     ctx.fillText("Shield  " + S_shield + " / " + S_shieldmax, 10, 100)
-    ctx.fillText("Shieldregen " + S_shieldregen * 10 + "/s", 10, 120)     
+    ctx.fillText("Shieldregen " + S_shieldregen * 10 + "/s", 10, 120)
     }
 }
 function drawFText(){
@@ -88,7 +88,7 @@ function drawFText(){
     if (infight == true){
     ctx.clearRect(200*Sc, 0, 200*Sc , 540*Sc)
     ctx.font = font;
-    ctx.fillStyle = "#ff0000" 
+    ctx.fillStyle = "#ff0000"
     ctx.fillText("Enemy Health  " + e_health + " / " + e_healthmax, 200*Sc, 40)
     ctx.fillStyle = "black"
     ctx.fillText("Damage  " + e_damage, 200*Sc, 60)
@@ -99,7 +99,7 @@ function drawFText(){
             ctx.fillStyle = "black"
             ctx.fillText("enemy", 200*Sc, 20)
         }
-        
+
     }
 }
 function drawTooltip(){
@@ -108,11 +108,11 @@ function drawTooltip(){
         if (mouseType == 0){
             ctx.fillStyle = "black"
             ctx.fillText("Space void...", 200*Sc, 20)
-            
+
         }else if(mouseType==1){
             ctx.fillStyle = "black"
             ctx.fillText("Your ship captain", 200*Sc, 20)
-            
+
         }else if(mouseType==2){
             ctx.fillStyle = "black"
             ctx.fillText("Hostile enemy", 200*Sc, 20)
@@ -134,7 +134,7 @@ function drawTooltip(){
         }else if(mouseType==6){
             ctx.fillStyle = "black"
             ctx.fillText("Harvestable scrap", 200*Sc, 20)
-            ctx.fillText("Scrap detected: " + 2 *zone, 200*Sc, 40)    
+            ctx.fillText("Scrap detected: " + 2 *zone, 200*Sc, 40)
         }else if(mouseType==7){
             ctx.fillStyle = "black"
             ctx.fillText("Space wall anomaly", 200*Sc, 20)
@@ -142,22 +142,22 @@ function drawTooltip(){
         }else if(mouseType==8){
             ctx.fillStyle = "black"
             ctx.fillText("Some scraparmor deposit", 200*Sc, 20)
-            ctx.fillText("Armor:"+(zone-3)*2, 200*Sc, 40)    
-            
+            ctx.fillText("Armor:"+(zone-3)*2, 200*Sc, 40)
+
         }else if(mouseType==9){
             ctx.fillStyle = "cyan"
             ctx.fillText("Very energetic system", 200*Sc, 20)
-            ctx.fillText("It's mysterious", 200*Sc, 40)    
-            
+            ctx.fillText("It's mysterious", 200*Sc, 40)
+
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
     }
 }
