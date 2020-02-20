@@ -43,5 +43,5 @@ function bonus(t){
     if (t==5){
         shieldpickup()
     }
-
+Shopupdate()
 }

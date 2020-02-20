@@ -5,7 +5,7 @@ function mcheck(mx,my,bx,by,bw,bh,idb){
     bpres=true
     bid=idb
     setTimeout(drawbutton,200)
-    console.log(bid)
+    //console.log(bid)
     }else{
 
     }

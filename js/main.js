@@ -48,7 +48,7 @@ function init(){
     inbossfight=false
     initmap(1)
     initship()
-
+    Shopupdate()
 
 
 }

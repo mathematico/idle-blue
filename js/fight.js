@@ -7,7 +7,7 @@ function fight(t){
     e_healthmax = Math.floor(3*Math.pow(1.3,zone))
     e_health=e_healthmax
     e_damage = Math.floor(1*Math.pow(1.3,zone))
-    infight= true    
+    infight= true
     }
     if (t==2){
     e_healthmax = Math.floor(6*Math.pow(1.40,zone))
@@ -16,7 +16,7 @@ function fight(t){
     infight= true
     inbossfight= true
     }
-    
+Shopupdate()
 }
 
 function turn(){
@@ -34,13 +34,13 @@ function turn(){
                 scraparmor=Math.floor(inter)
                 }else{
                 scraparmor=0
-                S_health = S_health + Math.floor(2*inter)     
+                S_health = S_health + Math.floor(2*inter)
             }
         }else {
             if (inbossfight==false){
                 infight=false
                 scrapamount += 2*zone
-                drawbutton()
+
             } else if(inbossfight==true){
                 console.log("bosskill")
                 infight=false
@@ -49,12 +49,13 @@ function turn(){
                 tcamount += Math.floor(Math.pow(zone,1.1)/10)
                 zone +=1
                 initmap(zone)
-                drawbutton()
+
         }
     }
-    
+
 }
     if (S_health <=0){
         gameover()
     }
+Shopupdate()
 }

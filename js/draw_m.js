@@ -68,7 +68,8 @@ function drawText()
     if (scrapamount>0){
     ctx.fillStyle = "black"
     ctx.fillText("Scrap  " + scrapamount, 10, 320)
-    statT= statT+ " Scrap : " + scrapamount
+    statT= statT+ " Scraps : " + scrapamount
+      document.getElementById("BUpgrade").style.display = "inline"
     }
     if (tcamount>0){
     ctx.fillStyle = "black"
@@ -78,13 +79,13 @@ function drawText()
     if (scraparmorupgrade==true || scraparmor>0){
     ctx.fillStyle = "brown"
     ctx.fillText("Scraparmor "+scraparmor, 10, 80)
-    statT= statT+ "Scraparmor "+scraparmor
+    statT= statT+ " Scraparmor "+scraparmor
     }
      if (S_shieldregen>0){
     ctx.fillStyle = "cyan"
     ctx.fillText("Shield  " + S_shield + " / " + S_shieldmax, 10, 100)
     ctx.fillText("Shieldregen " + S_shieldregen * 10 + "/s", 10, 120)
-    statT= statT+ "Shield  " + S_shield + " / " + S_shieldmax + "Shieldregen " + S_shieldregen * 10 + "/s"
+    statT= statT+ " Shield  " + S_shield + " / " + S_shieldmax + " Shieldregen " + S_shieldregen * 10 + "/s"
     }
     document.getElementById("stat").innerHTML=statT
 }

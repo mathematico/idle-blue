@@ -8,9 +8,9 @@
   </div>
 
   <div class="w3-bar w3-black">
-    <button class="w3-bar-item w3-button" onclick="fopentab('Map')">Map</button>
-    <button class="w3-bar-item w3-button" onclick="fopentab('Upgrade')">Upgrade</button>
-    <button class="w3-bar-item w3-button" onclick="fopentab('Prestige')">Prestige</button>
+    <button id="BMap" class="w3-bar-item w3-button" onclick="fopentab('Map')">Map</button>
+    <button id="BUpgrade" class="w3-bar-item w3-button" onclick="fopentab('Upgrade')" style="display:none" >Upgrade</button>
+    <button id="BPrestige" class="w3-bar-item w3-button" onclick="fopentab('Prestige')" style="display:none" >Prestige</button>
   </div>
 
   <div id="Map" class="w3-container tab">
@@ -19,7 +19,10 @@
   </div>
 
   <div id="Upgrade" class="w3-container tab" style="display:none">
-
+    <button id="Bbuyheal" class="w3-bar-item w3-button" onclick="buyheal()"></button>
+    <button id="Bbuyscraparmor" class="w3-bar-item w3-button" onclick="buyscraparmor()"style="display:none"></button>
+    <button id="Bbuyshieldmax" class="w3-bar-item w3-button" onclick="buyshieldmax()"style="display:none"></button>
+    <button id="Bbuyshieldregen" class="w3-bar-item w3-button" onclick="buyshieldregen()"style="display:none"></button>
   </div>
 
   <div id="Prestige" class="w3-container tab" style="display:none">
