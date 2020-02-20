@@ -9,25 +9,22 @@
   </div>
 
   <div class="w3-bar w3-black">
-    <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
-    <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
-    <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</button>
+    <button class="w3-bar-item w3-button" onclick="fopentab('Map')">Map</button>
+    <button class="w3-bar-item w3-button" onclick="fopentab('Upgrade')">Paris</button>
+    <button class="w3-bar-item w3-button" onclick="fopentab('Prestige')">Tokyo</button>
   </div>
 
-  <div id="London" class="w3-container city">
-    <h2>London</h2>
-    <p>London is the capital city of England.</p>
+  <div id="Map" class="w3-container city">
+
     <canvas id="game" width="1280" height="640"></canvas>
   </div>
 
-  <div id="Paris" class="w3-container city" style="display:none">
-    <h2>Paris</h2>
-    <p>Paris is the capital of France.</p>
+  <div id="Upgrade" class="w3-container city" style="display:none">
+
   </div>
 
-  <div id="Tokyo" class="w3-container city" style="display:none">
-    <h2>Tokyo</h2>
-    <p>Tokyo is the capital of Japan.</p>
+  <div id="Prestige" class="w3-container city" style="display:none">
+
   </div>
  <script src="js/main.js"></script>
     <script src="js/draw_m.js"></script>
@@ -44,13 +41,13 @@
     <script src="js/logic.js"></script>
     <script src="js/load.js"></script>
     <script>
-function openCity(cityName) {
+function fopentab(tabName) {
   var i;
-  var x = document.getElementsByClassName("city");
+  var x = document.getElementsByClassName("tab");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(tabName).style.display = "block";
 }
 </script>
 </body>
