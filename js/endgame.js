@@ -33,7 +33,7 @@ function drawprestige(){
      document.getElementById("BPhealth+").style.display = "inline"
      document.getElementById("BPhealth-").style.display = "inline"
    }
-   document.getElementById("BPhealtht").innerHTML = "Health bonus on start game :" + Phealth
+   document.getElementById("BPhealtht").innerHTML = "Health bonus on start game :" + Phealth*2
    document.getElementById("BPhealth+").innerHTML = "+1 for :" + Phealthprice + "TC"
    document.getElementById("BPhealth-").innerHTML = "-1 for :" + Phealthprice/2 + "TC"
 }
