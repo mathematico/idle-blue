@@ -12,9 +12,10 @@
     <button id="BUpgrade" class="w3-bar-item w3-button" onclick="fopentab('Upgrade')" style="display:none" >Upgrade</button>
     <button id="BPrestige" class="w3-bar-item w3-button" onclick="fopentab('Prestige')" style="display:none" >Prestige</button>
     <button id="BOptions" class="w3-bar-item w3-button" onclick="fopentab('Options')" >Options</button>
+    <button id="BInfo" class="w3-bar-item w3-button" onclick="fopentab('Info')" >Info</button>
   </div>
 
-  <div id="Map" class="w3-container tab">
+  <div id="Map" class="w3-container tab"style="display:none">
 
     <canvas id="game" width="1280" height="640"></canvas>
   </div>
@@ -47,7 +48,14 @@
     <button onclick="fexport()">export current</button>
     <button onclick="resetsave()">RESET COMPLETLY and clear autosave</button>
   </div>
-
+  <div id="Info" class="w3-container tab" >
+  <p>This is a minimalist incremental/idle/puzzle game where you control a spaceship, it's a red square, no it's YOUR red square.</p>
+  <p>You move around with the arrowkey, you can use your mouse over the map to know what tile is what.</p>
+  <p>Winning a boss fight will transport you to the next zone, so pick up all powerup before!</p>
+  <p>I wont tell you too much, the fun is in discovering things but a little hint is to not fight common enemies before zone 5</p>
+  <p>Dying is permanent, it forces you to prestige and you only get something if you prestige >= zone 8 try to reach that</p>
+  <p>I think you are ready captain, hop into the map tab and have fun, don't forget to export your savetext for safety</p>
+  </div>
 
    <script src="js/display.js"></script>
    <script src="js/main.js"></script>
