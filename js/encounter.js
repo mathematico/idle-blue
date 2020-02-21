@@ -22,7 +22,8 @@ function encounter(a){
     if (a==9){
         bonus(5)
     }
-
+Shopupdate()
+drawprestige()
 }
 function bonus(t){
 
@@ -44,4 +45,5 @@ function bonus(t){
         shieldpickup()
     }
 Shopupdate()
+drawprestige()
 }

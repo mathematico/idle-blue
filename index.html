@@ -11,6 +11,7 @@
     <button id="BMap" class="w3-bar-item w3-button" onclick="fopentab('Map')">Map</button>
     <button id="BUpgrade" class="w3-bar-item w3-button" onclick="fopentab('Upgrade')" style="display:none" >Upgrade</button>
     <button id="BPrestige" class="w3-bar-item w3-button" onclick="fopentab('Prestige')" style="display:none" >Prestige</button>
+    <button id="BOptions" class="w3-bar-item w3-button" onclick="fopentab('Options')" >Options</button>
   </div>
 
   <div id="Map" class="w3-container tab">
@@ -26,10 +27,19 @@
   </div>
 
   <div id="Prestige" class="w3-container tab" style="display:none">
+    <button id="Breset" class="w3-bar-item w3-button" onclick="resetgame()"></button>
+    <p> you have to reset for upgrades to take in effect</p>
+    <p  id="BPhealtht" style="display:none"></p>
+    <button id="BPhealth+" class="w3-bar-item w3-button" onclick="fpuhealth('1')"style="display:none"></button>
+    <button id="BPhealth-" class="w3-bar-item w3-button" onclick="fpuhealth('0')" style="display:none"></button>
+  </div>
+  <div id="Options" class="w3-container tab" style="display:none">
 
   </div>
+
+
    <script src="js/display.js"></script>
- <script src="js/main.js"></script>
+   <script src="js/main.js"></script>
     <script src="js/draw_m.js"></script>
     <script src="js/map.js"></script>
     <script src="js/movement.js"></script>

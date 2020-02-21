@@ -18,13 +18,13 @@ var bpres=false
 var gamedone = false
 var mouseX=0,mouseY=0
 var Ssmenu=false, shopfirst= false
-var bid= 0
 var Healprice=1,scraparmorprice=2
 var mouseCase=0,mouseType=0
 var scraparmor=0,scraparmorupgrade = false
 var inter=0, inter_2=0
 var S_shield =0, S_shieldregen=0, S_shieldmax=0
 var Shieldregenprice=50, Shieldmaxprice=20
+var Phealth=0, Phealthprice=1
 
 function init(){
     ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)

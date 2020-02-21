@@ -14,6 +14,9 @@ function drawGame()
                 case 1:
                      //ctx.rect(x*tileW+mapx,y*tileH+mapy,tileW, tileH)
                     ctx.fillStyle = "red";
+                    if (S_shieldregen>0&&S_shield==S_shieldmax){
+                      ctx.fillStyle = "cyan";
+                    }
 
             break;
                 case 2:
@@ -73,8 +76,8 @@ function drawText()
     }
     if (tcamount>0){
     ctx.fillStyle = "black"
-    ctx.fillText("temportal currency" + tcamount, 10, 440)
-    statT= statT+ "temportal currency" + tcamount
+    ctx.fillText(" TC: " + tcamount, 10, 440)
+    statT= statT+ " TC: " + tcamount
     }
     if (scraparmorupgrade==true || scraparmor>0){
     ctx.fillStyle = "brown"
