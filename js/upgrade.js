@@ -24,7 +24,7 @@ function buyscraparmor(){
 Shopupdate()
 }
 function buyshieldmax(){
-    if (scrapamount >= Shieldmaxprice){
+    if (scrapamount >= Shieldmaxprice&&S_shieldregen>0){
         S_shieldmax = Math.floor(S_shieldmax*1.25)
         scrapamount -= Shieldmaxprice
         Shieldmaxprice = Math.ceil(Shieldmaxprice*1.5)
@@ -33,7 +33,7 @@ function buyshieldmax(){
         Shopupdate()
 }
 function buyshieldregen(){
-    if (scrapamount >= Shieldregenprice){
+    if (scrapamount >= Shieldregenprice&&S_shieldregen>0){
         S_shieldregen = S_shieldregen*2
         scrapamount -= Shieldregenprice
         Shieldregenprice = Math.ceil(Shieldregenprice*4)
