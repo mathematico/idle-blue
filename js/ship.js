@@ -4,6 +4,9 @@ function initship(){
 S_healthmax = 10+2*Phealth, S_health = S_healthmax
 S_damage = 1
 scraparmor=0
+if (Pshieldmaster==true){
+  shieldpickup()
+}
 }
 
 function shieldpickup(){
@@ -13,6 +16,7 @@ function shieldpickup(){
     S_shieldregen =0.01
 
 }else{
+  S_shieldmax *=2
   S_shieldregen = Math.floor(1000*1.2*S_shieldregen)/1000
 }
 S_shieldregen=Math.ceil(S_shieldregen*1000)/1000
