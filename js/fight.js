@@ -22,7 +22,7 @@ Shopupdate()
 function turn(){
     if (infight==true && gamedone==false){
     e_health = e_health - S_damage
-        if (e_health >=0){
+        if (e_health >0){
             inter_2 = e_damage - Math.floor(S_shield)
                 if (inter_2>=0){
                     S_shield=0
