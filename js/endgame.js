@@ -28,6 +28,7 @@ function drawprestige(){
    document.getElementById("Breset").innerHTML = "Reset for:" + (Math.floor(Math.pow(1.1,zone))-1) + " temporal currency"
    drawText()
    if (tcamount>=1||Phealth>=1){
+     document.getElementById("BPrestige").style.display = "inline"
      document.getElementById("BPhealtht").style.display = "block"
      document.getElementById("BPhealth+").style.display = "inline"
      document.getElementById("BPhealth-").style.display = "inline"

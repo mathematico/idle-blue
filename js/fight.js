@@ -38,12 +38,12 @@ function turn(){
                     S_shield=S_shield-e_damage
                 }
 
-            
+
         }else {
             if (inbossfight==false){
                 infight=false
                 scrapamount += 2*zone
-
+                fsave(0)
             } else if(inbossfight==true){
                 console.log("bosskill")
                 infight=false
@@ -52,7 +52,7 @@ function turn(){
                 tcamount += Math.floor(Math.pow(zone,1.1)/10)
                 zone +=1
                 initmap(zone)
-
+                fsave(0)
         }
     }
 

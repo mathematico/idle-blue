@@ -41,6 +41,7 @@ function init(){
     zone=1
     Healprice=1
     scraparmorprice=2
+    S_shield=0
     S_shieldregen=0
     Shieldregenprice=50
     Shieldmaxprice=20

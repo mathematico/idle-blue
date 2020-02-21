@@ -80,3 +80,8 @@ function fexport(){
 fsave(5)
 document.getElementById("impexp").value=localStorage.getItem(5)
 }
+function resetsave(){
+localStorage.removeItem(0)
+location.reload()
+
+}
