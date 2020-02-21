@@ -32,7 +32,7 @@ localStorage.setItem(n,JSON.stringify(savevar))}
 }
 function fload(n){
   savevar= JSON.parse(localStorage.getItem(n))
-      var_version = savevar.var_version
+      var_version = savevar.yvar_version
       lastUpdate=savevar.lastUpdate
       pposy=savevar.pposy
       pposx=savevar.pposx
@@ -56,6 +56,9 @@ function fload(n){
       Phealth=savevar.Phealth
       Phealthprice=savevar.Phealthprice
       Pshieldmaster=savevar.Pshieldmaster
+
+
+      savefix()
 }
 function fimport(){
   savevar= JSON.parse(document.getElementById("impexp").value)
@@ -69,5 +72,12 @@ document.getElementById("impexp").value=localStorage.getItem(5)
 function resetsave(){
 localStorage.removeItem(0)
 location.reload()
+
+}
+
+function savefix(){
+  if (typeof Pshieldmaster == 'undefined') {
+    Pshieldmaster= false
+}
 
 }

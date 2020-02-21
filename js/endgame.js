@@ -32,11 +32,19 @@ function drawprestige(){
      document.getElementById("BPhealtht").style.display = "block"
      document.getElementById("BPhealth+").style.display = "inline"
      document.getElementById("BPhealth-").style.display = "inline"
+     document.getElementById("BPshieldmaster").style.display = "inline"
    }
    document.getElementById("BPhealtht").innerHTML = "Health bonus on start game:" + Phealth*2
    document.getElementById("BPhealth+").innerHTML = "+1 for :" + Phealthprice + " TC"
    document.getElementById("BPhealth-").innerHTML = "-1 for :" + Phealthprice/2 + " TC"
+   if (Pshieldmaster==false){
+     document.getElementById("BPshieldmaster").innerHTML = "Buy for 1 TC"
+   }else{
+     document.getElementById("BPshieldmaster").innerHTML = "Bought"
+   }
 }
+
+
 function fpuhealth(n){
   if (n==1&&tcamount>=Phealthprice){
     tcamount -=Phealthprice
@@ -48,4 +56,12 @@ function fpuhealth(n){
     Phealthprice/=2
   }
 drawprestige()
+}
+function fshieldmaster(){
+  if (Pshieldmaster==false&&tcamount>=1){
+    Pshieldmaster=true
+    tcamount -= 1
+  }
+drawprestige()
+
 }
