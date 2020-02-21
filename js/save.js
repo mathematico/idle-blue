@@ -2,7 +2,7 @@ function fsave(n){
   if (infight == false && gamedone==false){
   savevar={
 
-    //"var_version" : var_version,
+    "var_version" : var_version,
     "lastUpdate":lastUpdate,
     "pposy":pposy,
     "pposx":pposx,
@@ -32,6 +32,7 @@ localStorage.setItem(n,JSON.stringify(savevar))}
 }
 function fload(n){
   savevar= JSON.parse(localStorage.getItem(n))
+      var_version = savevar.var_version
       lastUpdate=savevar.lastUpdate
       pposy=savevar.pposy
       pposx=savevar.pposx

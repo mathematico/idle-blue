@@ -25,8 +25,9 @@ var inter=0, inter_2=0
 var S_shield =0, S_shieldregen=0, S_shieldmax=0
 var Shieldregenprice=50, Shieldmaxprice=20
 var Phealth=0, Phealthprice=1
-var Pshieldmaster=false
+var Pshieldmaster = false
 var lastUpdate=new Date().getTime()
+var var_version= 1.01
 
 function init(){
     ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
