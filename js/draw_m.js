@@ -86,9 +86,9 @@ function drawText()
     }
      if (S_shieldregen>0){
     ctx.fillStyle = "cyan"
-    ctx.fillText("Shield  " + S_shield + " / " + S_shieldmax, 10, 100)
-    ctx.fillText("Shieldregen " + S_shieldregen * 10 + "/s", 10, 120)
-    statT= statT+ " S: " + S_shield + " / " + S_shieldmax
+    ctx.fillText("Shield  " + S_shield.toFixed(2) + " / " + S_shieldmax, 10, 100)
+    ctx.fillText("Shieldregen " + (S_shieldregen*10).toFixed(2)  + "/s", 10, 120)
+    statT= statT+ " S: " + S_shield.toFixed(2) + " / " + S_shieldmax
     }
     document.getElementById("stat").innerHTML=statT
 }

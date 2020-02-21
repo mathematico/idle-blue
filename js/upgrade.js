@@ -53,6 +53,6 @@ document.getElementById("Bbuyscraparmor").innerHTML= "buy:" + Math.round(0.04*S_
    document.getElementById("Bbuyshieldregen").style.display= "block"
  }
  document.getElementById("Bbuyshieldmax").innerHTML= "upgrade:" + Math.floor(S_shieldmax*1.25) + " max shield for:" + Shieldmaxprice +" scraps"
- document.getElementById("Bbuyshieldregen").innerHTML= "upgrade:" + S_shieldregen*20 + " shield regen for:" + Shieldregenprice +" scraps"
+ document.getElementById("Bbuyshieldregen").innerHTML= "upgrade:" + (S_shieldregen*20).toFixed(2) + " shield regen for:" + Shieldregenprice +" scraps"
 
 }
