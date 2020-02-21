@@ -8,6 +8,7 @@ scraparmor=0
 
 function shieldpickup(){
     S_shieldmax =10
+    S_shield=1
     S_shieldregen =0.01
 
 }

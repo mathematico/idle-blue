@@ -25,6 +25,7 @@ var inter=0, inter_2=0
 var S_shield =0, S_shieldregen=0, S_shieldmax=0
 var Shieldregenprice=50, Shieldmaxprice=20
 var Phealth=0, Phealthprice=1
+var lastUpdate=new Date().getTime()
 
 function init(){
     ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height)
@@ -99,11 +100,14 @@ function fightloop()
    turn();
 }
 setInterval(fightloop,500)
-function logicloop (){
-Shieldact()
 
-}
-setInterval(logicloop,100)
+setInterval(function(){
+  var thisUpdate = new Date().getTime();
+  var diff = thisUpdate - lastUpdate;
+  lastUpdate = thisUpdate;
+  Shieldact(diff)
+}, 50);
+
 window.addEventListener("keydown", function(e) {
     // space and arrow keys
     if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {

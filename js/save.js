@@ -3,6 +3,7 @@ function fsave(n){
   savevar={
 
     //"var_version" : var_version,
+    "lastUpdate":lastUpdate,
     "pposy":pposy,
     "pposx":pposx,
     "pcase" : pcase,
@@ -30,6 +31,7 @@ localStorage.setItem(n,JSON.stringify(savevar))}
 }
 function fload(n){
   savevar= JSON.parse(localStorage.getItem(n))
+      lastUpdate=savevar.lastUpdate
       pposy=savevar.pposy
       pposx=savevar.pposx
       pcase=savevar.pcase
