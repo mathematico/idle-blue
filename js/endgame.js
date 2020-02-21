@@ -1,5 +1,6 @@
 function gameover(){
         if (gamedone == false){
+            infight = false
             gamedone = true
             mmenu = false
             fopentab('Prestige')

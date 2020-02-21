@@ -34,7 +34,17 @@
     <button id="BPhealth-" class="w3-bar-item w3-button" onclick="fpuhealth('0')" style="display:none"></button>
   </div>
   <div id="Options" class="w3-container tab" style="display:none">
-
+    <button onclick="fsave(0)">save auto</button>
+    <button onclick="fload(0)"style="display:block">load auto</button>
+    <button onclick="fsave(1)">save slot 1</button>
+    <button onclick="fload(1)">load slot 1</button>
+    <button onclick="fsave(2)">save slot 2</button>
+    <button onclick="fload(2)">load slot 2</button>
+    <button onclick="fsave(3)">save slot 3</button>
+    <button onclick="fload(3)">load slot 3</button>
+    <input type="text" id="impexp" style="display:block">
+    <button onclick="fimport()"style="display:block">import current</button>
+    <button onclick="fexport()">export current</button>
   </div>
 
 
@@ -52,6 +62,7 @@
 
     <script src="js/upgrade.js"></script>
     <script src="js/logic.js"></script>
+    <script src="js/save.js"></script>
     <script src="js/load.js"></script>
     <script>
 
